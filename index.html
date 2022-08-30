@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flag Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="list.js"></script>
+  </head>
+  <body>
+
+
+<h1>Flag Finder</h1>
+<!-- language image color horiz/vert stripes-->
+
+<div id="users">
+  <input class="search" placeholder="Search" />
+  <button class="sort" data-sort="name">
+    Sort by name
+  </button>
+  <table>
+    <!-- IMPORTANT, class="list" have to be at tbody -->
+    <tbody class="list">
+      <tr>
+        <td class="name">black red green white image arabic</td>
+        <td class="born">Afghanistan</td>
+        <td class="flag"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Afghanistan_%281928%29.svg/1920px-Flag_of_Afghanistan_%281928%29.svg.png" alt="" height=30 width=50 /></td>
+      </tr>
+      <tr>
+        <td class="name">red black dragon</td>
+        <td class="born">Albania</td>
+        <td class="flag">link</td>
+      </tr>
+      <tr>
+        <td class="name">green white red moon star</td>
+        <td class="born">Algeria</td>
+        <td class="flag">link</td>
+      </tr>
+      <tr>
+        <td class="name">vertical tricolor blue yellow red coat of arms</td>
+        <td class="born">Andorra</td>
+        <td class="flag">link</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+  </body>
+	<script>
+   
+var options = {
+  valueNames: [ 'name', 'born' ]
+};
+
+var userList = new List('users', options);
+  </script>
+
+</html>
