@@ -4,50 +4,650 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Flag Finder</title>
+    <title>FlagFinder</title>
+    <!--not sure that my stylesheets are in right order ah -->
     <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="list.js"></script>
   </head>
+
+<!-- search bars: https://uicookies.com/html-search-box/ -->
+<div class="full-page">
   <body>
 
+<!--words I want to include: bicolor and tricolor, center and centre, field and background -->
 
-<h1>Flag Finder</h1>
-<!-- language image color horiz/vert stripes-->
+  <div id="users">
+    <input class="search round" placeholder="Search" />
 
-<div id="users">
-  <input class="search" placeholder="Search" />
-  <button class="sort" data-sort="name">
-    Sort by name
-  </button>
-  <table>
-    <!-- IMPORTANT, class="list" have to be at tbody -->
+      <p class="example raleway">Search example: horizontally striped blue white gold sun </p>
+
+  <table class="table table-striped table-responsive table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Country</th>
+        <th scope="col">Flag</th>
+        <th scope="col">Tags</th>
+      </tr>
+    </thead>
     <tbody class="list">
       <tr>
-        <td class="name">black red green white image arabic</td>
-        <td class="born">Afghanistan</td>
-        <td class="flag"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Afghanistan_%281928%29.svg/1920px-Flag_of_Afghanistan_%281928%29.svg.png" alt="" height=30 width=50 /></td>
+        <th scope="row">1</th>
+        <td class="name">Afghanistan</td>
+        <td class="flag"><img src="https://cdn.britannica.com/40/5340-004-B25ED5CF/Flag-Afghanistan.jpg" alt="vertically striped black-red-green national flag with a central white coat of arms." height="70" width="110"></td>
+        <td class="born">black red green white emblem arabic</td>
       </tr>
       <tr>
-        <td class="name">red black dragon</td>
-        <td class="born">Albania</td>
-        <td class="flag">link</td>
+        <th scope="row">2</th>
+        <td class="name">Albania</td>
+        <td class="flag"><img src="https://cdn.britannica.com/00/6200-004-42B7690E/Flag-Albania.jpg" alt="Girl in a jacket" height="70" width="110"></td>
+        <td class="born">red black dragons emblem</td>
       </tr>
       <tr>
-        <td class="name">green white red moon star</td>
-        <td class="born">Algeria</td>
-        <td class="flag">link</td>
+        <th scope="row">3</th>
+        <td class="name">Algeria</td>
+        <td class="flag"><img src="https://cdn.britannica.com/34/3034-004-1A765B57/Flag-Algeria.jpg" alt="Girl in a jacket" height="70" width="110"></td>
+        <td class="born">green white red moon and star</td>
       </tr>
       <tr>
-        <td class="name">vertical tricolor blue yellow red coat of arms</td>
-        <td class="born">Andorra</td>
-        <td class="flag">link</td>
+        <th scope="row">4</th>
+        <td class="name">Andorra</td>
+        <td class="flag"><img src="https://cdn.britannica.com/83/5583-004-FCE4E901/Flag-Andorra.jpg" alt="Girl in a jacket" height="70" width="110"></td>
+        <td class="born">vertically striped stripes tricolor blue yellow red emblem</td>
       </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td class="name">Angola</td>
+          <td class="flag"><img src="https://cdn.britannica.com/12/4212-004-EBD6B5B2/Flag-Angola.jpg" alt="Girl in a jacket" height="70" width="110"></td>
+          <td class="born">red black yellow emblem star cogwheel horizontally striped stripes machete </td>
+      </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td class="name">Antigua and Barbuda</td>
+          <td class="flag"><img src="https://cdn.britannica.com/04/5104-004-51F5F120/Flag-Antigua-and-Barbuda.jpg" alt="rectangular national flag with red triangles at the hoist and fly ends and a central triangular area of white, blue, and black, incorporating a golden sun." height="70" width="110"></td>
+          <td class="born">red triangles white blue black yellow gold sun water sky white</td>
+      </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td class="name">Argentina</td>
+          <td class="flag"><img src="https://cdn.britannica.com/69/5869-004-7D75CD05/Flag-Argentina.jpg" alt="horizontally striped blue-white-blue national flag, with a brown-bordered central golden sun." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes blue white yellow gold sun ensignia</td>
+      </tr>
+        <tr>
+          <th scope="row">8</th>
+          <td class="name">Armenia</td>
+          <td class="flag"><img src=https://cdn.britannica.com/11/4711-004-1504C169/Flag-Armenia.jpg alt="Girl in a jacket" height="70" width="110"></td>
+          <td class="born">horizontally striped stripes red blue yellow</td>
+      </tr>
+        <tr>
+          <th scope="row">9</th>
+          <td class="name">Australia</td>
+          <td class="flag"><img src="https://cdn.britannica.com/78/6078-004-77AF7322/Flag-Australia.jpg" alt="Girl in a jacket" height="70" width="110"></td>
+          <td class="born">blue white stars union jack top left corner</td>
+      </tr>
+       <tr>
+          <th scope="row">10</th>
+          <td class="name">Austria</td>
+          <td class="flag"><img src="https://cdn.britannica.com/73/6073-004-B0B9EBEE/Flag-Austria.jpg" alt="horizontally striped red-white-red national flag. When it is flown by the government, it incorporates a central black eagle. " height="70" width="110"></td>
+          <td class="born">horizontally striped stripes red white red center black eagle chains</td>
+      </tr>
+      <tr>
+          <th scope="row">11</th>
+          <td class="name">Azerbaijan</td>
+          <td class="flag"><img src="https://cdn.britannica.com/14/4714-004-959E7B43/Flag-Azerbaijan.jpg" alt="horizontally striped light blue, red, and green national flag with a central crescent and star." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes blue red green white crescent star moon</td>
+      </tr>
+       <tr>
+          <th scope="row">12</th>
+          <td class="name">Bahamas</td>
+          <td class="flag"><img src="https://cdn.britannica.com/06/5106-004-B8EE9FD3/Flag-of-The-Bahamas.jpg" alt="horizontally striped aquamarine-yellow-aquamarine national flag with a black triangle at the hoist." height="70" width="110"></td>
+          <td class="born">black triangle yellow stripe tricolor blue horizontally striped</td>
+      </tr>
+       <tr>
+          <th scope="row">13</th>
+          <td class="name">Bahrain</td>
+          <td class="flag"><img src="https://cdn.britannica.com/67/5767-004-E0FF7201/Flag-Bahrain.jpg" alt="national flag consisting of a red field (background) with a white, serrated strip at the hoist." height="70" width="110"></td>
+          <td class="born">serrated strip zipper triangles red white zigzag</td>
+      </tr>
+      <tr>
+          <th scope="row">14</th>
+          <td class="name">Bangladesh</td>
+          <td class="flag"><img src="https://cdn.britannica.com/67/6267-004-10A21DF0/Flag-Bangladesh.jpg" alt="national flag consisting of a dark bluish green field (background) incorporating a large, off-centre orange-red disk." height="70" width="110"></td>
+          <td class="born">green orange red disk disc circle sun</td>
+      </tr>
+       <tr>
+          <th scope="row">15</th>
+          <td class="name">Barbados</td>
+          <td class="flag"><img src="https://cdn.britannica.com/08/5108-004-FD58C8EF/Flag-Barbados.jpg" alt="vertically striped national flag of blue-yellow-blue with a central black trident head." height="70" width="110"></td>
+          <td class="born">tricolor vertically striped stripes blue yellow black trident fork</td>
+      </tr>
+       <tr>
+          <th scope="row">16</th>
+          <td class="name">Belarus</td>
+          <td class="flag"><img src="https://cdn.britannica.com/01/6401-004-FAEACB4E/Flag-Belarus.jpg" alt="horizontally striped red-green national flag with a vertical stripe of red and white at the hoist." height="70" width="110"></td>
+          <td class="born">horizontally striped red green vertical stripe white embroidery pattern left</td>
+      </tr>
+      <tr>
+          <th scope="row">17</th>
+          <td class="name">Belgium</td>
+          <td class="flag"><img src="https://cdn.britannica.com/08/6408-004-405E272F/Flag-Belgium.jpg" alt="vertically striped black-yellow-red national flag." height="70" width="110"></td>
+          <td class="born">vertically striped stripes black yellow red</td>
+      </tr>
+       <tr>
+          <th scope="row">18</th>
+          <td class="name">Belize</td>
+          <td class="flag"><img src="https://cdn.britannica.com/07/7207-004-A82842C0/Flag-Belize.jpg" alt="national flag with horizontal stripes of red, dark blue, and red, incorporating on its wide middle stripe the national coat of arms." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes red blue coat of arms sub umbra floreo men white pants white circle leaves</td>
+      </tr>
+             <tr>
+          <th scope="row">19</th>
+          <td class="name">Benin</td>
+          <td class="flag"><img src="https://cdn.britannica.com/37/5037-004-E474738C/Flag-Benin.jpg" alt="national flag with horizontal stripes of yellow and red and, at the hoist, a vertical green stripe." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes yellow red vertical green</td>
+      </tr>
+             <tr>
+          <th scope="row">20</th>
+          <td class="name">Bhutan</td>
+          <td class="flag"><img src="https://cdn.britannica.com/79/6479-004-BDDD1FE1/flag-dragon-image-Bhutan-design.jpg" alt="diagonally divided (yellow-orange over orange-red) national flag featuring a white dragon in its centre." height="70" width="110"></td>
+          <td class="born">diagonally divided yellow orange white dragon center</td>
+      </tr>
+             <tr>
+          <th scope="row">21</th>
+          <td class="name">Bolivia</td>
+          <td class="flag"><img src="https://cdn.britannica.com/54/6754-004-AE3C4294/Flag-Bolivia.jpg" alt="horizontally striped red-yellow-green national flag that incorporates the national coat of arms when it is flown by the government." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes red yellow green coat of arms center bird eagle mountains flags emblem</td>
+      </tr>
+      <tr>
+          <th scope="row">22</th>
+          <td class="name">Bosnia and Herzegovina</td>
+          <td class="flag"><img src="https://cdn.britannica.com/02/6202-004-5E2B285D/Flag-Bosnia-and-Herzegovina.jpg" alt="national flag consisting of a blue field (background) divided by a large yellow triangle and a diagonal line of nine white stars; the stars at the top and bottom are cut off by the edges of the flag." height="70" width="110"></td>
+          <td class="born">blue yellow triangle diagonal nine white stars</td>
+      </tr>
+            <tr>
+          <th scope="row">23</th>
+          <td class="name">Botswana</td>
+          <td class="flag"><img src="https://cdn.britannica.com/15/4215-004-F844A05D/Flag-Botswana.jpg" alt="national flag consisting of a light blue field (background) with central white-black-white stripes" height="70" width="110"></td>
+          <td class="born">light blue white black stripe horizontal</td>
+      </tr>
+            <tr>
+          <th scope="row">24</th>
+          <td class="name">Brazil</td>
+          <td class="flag"><img src="https://cdn.britannica.com/47/6847-004-7D668BB0/Flag-Brazil.jpg" alt="national flag consisting of a green field (background) with a large yellow diamond incorporating a blue disk with a white band and stars." height="70" width="110"></td>
+          <td class="born">green yellow blue white stars ordem e progresso words text diamond</td>
+      </tr>
+            <tr>
+          <th scope="row">25</th>
+          <td class="name">Brunei</td>
+          <td class="flag"><img src="https://cdn.britannica.com/24/4024-004-246630D3/Flag-Brunei.jpg" alt="horizontally striped red-green national flag with a vertical stripe of red and white at the hoist." height="70" width="110"></td>
+          <td class="born">yellow two diagonal stripes white black center red yellow coat of arms words text hands moon wings flag arabic</td>
+      </tr>
+            </tr>
+            <tr>
+          <th scope="row">26</th>
+          <td class="name">Bulgaria</td>
+          <td class="flag"><img src="https://cdn.britannica.com/04/6204-004-DC5CFE4F/Flag-Bulgaria.jpg" alt="horizontally striped white-green-red national flag." height="70" width="110"></td>
+          <td class="born">white green red horizontally striped stripes</td>
+      </tr>
+            <tr>
+          <th scope="row">27</th>
+          <td class="name">Burkina Faso</td>
+          <td class="flag"><img src="https://cdn.britannica.com/40/5040-004-B1F985C9/Flag-Burkina-Faso.jpg" alt="horizontally striped red-green national flag with a central yellow star. " height="70" width="110"></td>
+          <td class="born">horizontally striped stripes red green yellow star center</td>
+      </tr>
+            <tr>
+          <th scope="row">28</th>
+          <td class="name">Burundi</td>
+          <td class="flag"><img src="https://cdn.britannica.com/77/7177-004-9D72922D/Flag-Burundi.jpg" alt="red and green national flag with a white saltire (diagonal cross) and a central white disk incorporating three large stars." height="70" width="110"></td>
+          <td class="born">red green white saltire diagonal cross white disk center three stars border</td>
+            </tr>
+      <tr>
+          <th scope="row">29</th>
+          <td class="name">Côte d'Ivoire</td>
+          <td class="flag"><img src="https://cdn.britannica.com/48/5048-004-EA370A21/Flag-Cote-dIvoire.jpg" alt="vertically striped orange-white-green national flag." height="70" width="110"></td>
+          <td class="born">vertically striped stripes orange white green</td>
+      </tr>
+          <tr>
+          <th scope="row">30</th>
+          <td class="name">Cabo Verde</td>
+          <td class="flag"><img src="https://cdn.britannica.com/44/5044-004-DEEC9E26/Flag-Cabo-Verde.jpg" alt="horizontally striped national flag with two wide, unequal stripes of blue framing narrower stripes of white-red-white; a ring of 10 yellow stars is set off-centre toward the hoist. " height="70" width="110"></td>
+          <td class="born">horizontally striped stripes blue white red yellow stars ring 10 ten</td>
+      </tr>
+        <tr>
+          <th scope="row">31</th>
+          <td class="name">Cambodia</td>
+          <td class="flag"><img src="https://cdn.britannica.com/27/4027-004-B57F84E9/Flag-Cambodia.jpg" alt="horizontally striped blue-red-blue national flag featuring, in white, the main building of Angkor Wat, an ancient temple complex." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes blue red white center angkor wat ancient temple building</td>
+      </tr>
+        <tr>
+          <th scope="row">32</th>
+          <td class="name">Cameroon</td>
+          <td class="flag"><img src="https://cdn.britannica.com/42/5042-004-7FF4ACCA/Flag-Cameroon.jpg" alt="vertically striped green-red-yellow national flag with a central yellow star. I" height="70" width="110"></td>
+          <td class="born">vertically striped stripes green red yellow star center tricolor</td>
+      </tr>
+        <tr>
+          <th scope="row">33</th>
+          <td class="name">Canada</td>
+          <td class="flag"><img src="https://cdn.britannica.com/68/7068-004-7848FEB4/Flag-Canada.jpg" alt="vertically striped red-white-red national flag with a large central red maple leaf." height="70" width="110"></td>
+          <td class="born">vertically striped stripes red white central maple leaf center bicolor</td>
+      </tr>
+      <tr>
+          <th scope="row">34</th>
+          <td class="name">Central African Republic</td>
+          <td class="flag"><img src="https://cdn.britannica.com/80/7180-004-8AFA2B44/Flag-Central-African-Republic.jpg" alt="national flag with horizontal stripes of blue, white, green, and yellow, all overlapped by a central red vertical stripe; a yellow star is in the upper hoist corner." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes blue white green yellow central center red vertical stripe yellow star left corner</td>
+      </tr>
+              <tr>
+          <th scope="row">35</th>
+          <td class="name">Chad</td>
+          <td class="flag"><img src="https://cdn.britannica.com/46/5046-004-CA99DA45/Flag-Chad.jpg" alt="vertically striped blue-yellow-red national flag." height="70" width="110"></td>
+          <td class="born">vertically striped stripes blue yellow red tricolor</td>
+      </tr>
+      <tr>
+          <th scope="row">36</th>
+          <td class="name">Chile</td>
+          <td class="flag"><img src="https://cdn.britannica.com/85/7485-004-00B07230/Flag-Chile.jpg" alt="national flag with a horizontal white stripe over a red stripe; a dark blue canton with a large white star is in the upper hoist corner." height="70" width="110"></td>
+          <td class="born">horizontal white stripe red dark blue canton corner square white star upper hoist</td>
+      </tr>
+        <tr>
+          <th scope="row">37</th>
+          <td class="name">China</td>
+          <td class="flag"><img src="https://cdn.britannica.com/90/7490-004-BAD4AA72/Flag-China.jpg" alt="national flag consisting of a red field (background) with a large yellow star and four smaller stars in its upper hoist corner." height="70" width="110"></td>
+          <td class="born">red large yellow star four small stars five</td>
+      </tr>
+      <tr>
+          <th scope="row">38</th>
+          <td class="name">Colombia</td>
+          <td class="flag"><img src="https://cdn.britannica.com/68/7668-004-08492AB7/Flag-Colombia.jpg" alt="horizontally striped yellow-blue-red national flag." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes yellow blue red</td>
+      </tr>
+      <tr>
+          <th scope="row">39</th>
+          <td class="name">Comoros</td>
+          <td class="flag"><img src="https://cdn.britannica.com/40/7740-004-01894F47/Flag-Comoros.jpg" alt="national flag consisting of four horizontal stripes of yellow-white-red-blue and a green triangle bearing Islamic symbols—a white crescent and four white stars." height="70" width="110"></td>
+          <td class="born">four horizontally striped stripes yellow white red blue green triangle left islamic white crescent moon four stars</td>
+      </tr>
+      <tr>
+          <th scope="row">40</th>
+          <td class="name">Congo (Congo-Brazzaville)</td>
+          <td class="flag"><img src="https://cdn.britannica.com/82/7182-004-2F057893/Flag-Republic-of-the-Congo.jpg" alt="national flag consisting of a diagonal yellow stripe separating a green triangle at the hoist from a red triangle at the fly end." height="70" width="110"></td>
+          <td class="born">diagonal yellow stripes green triangle red triangle</td>
+      </tr>
+        <tr>
+          <th scope="row">41</th>
+          <td class="name">Costa Rica</td>
+          <td class="flag"><img src="https://cdn.britannica.com/25/7225-004-65F33B16/Flag-Costa-Rica.jpg" alt="national flag with horizontal stripes of blue, white, red, white, and blue; the version flown by the government incorporates the national coat of arms." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes blue white red coat of arms symbol gold</td>
+      </tr>
+      <tr>
+          <th scope="row">42</th>
+          <td class="name">Croatia</td>
+          <td class="flag"><img src="https://cdn.britannica.com/06/6206-004-14730C28/Flag-Croatia.jpg" alt="horizontally striped red-white-blue national flag with the national coat of arms in its centre." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes red white blue coat of arms center checkers checkerboard</td>
+      </tr>
+      <tr>
+          <th scope="row">43</th>
+          <td class="name">Cuba</td>
+          <td class="flag"><img src="https://cdn.britannica.com/10/5110-004-38075E57/Flag-Cuba.jpg" alt="national flag with three blue and two white horizontal stripes and a red triangle at the hoist bearing a white star." height="70" width="110"></td>
+          <td class="born">three blue two white horizontal stripes red triangle white star left</td>
+      </tr>
+      <tr>
+          <th scope="row">44</th>
+          <td class="name">Cyprus</td>
+          <td class="flag"><img src="https://cdn.britannica.com/83/7883-004-D09910C5/Flag-Cyprus.jpg" alt="national flag consisting of a white field (background) showing a yellow silhouette of Cyprus above two green olive branches." height="70" width="110"></td>
+          <td class="born">white background yellow orange silhouette cyprus shape country two green olive branches leaves</td>
+      </tr>
+      <tr>
+          <th scope="row">45</th>
+          <td class="name">Czechia (Czech Republic)</td>
+          <td class="flag"><img src="https://cdn.britannica.com/86/7886-004-323985BD/Flag-Czech-Republic.jpg" alt="national flag with two horizontal stripes of white over red with a blue triangle at the hoist." height="70" width="110"></td>
+          <td class="born">two horizontally striped stripes white red blue triangle</td>
+      </tr>
+      <tr>
+          <th scope="row">46</th>
+          <td class="name">Democratic Republic of the Congo</td>
+          <td class="flag"><img src="https://cdn.britannica.com/94/7194-004-5FA84A72/Flag-Democratic-Republic-of-the-Congo.jpg" alt="national flag consisting of a blue field (background) with a yellow-bordered red diagonal stripe running from the lower hoist to the upper fly corner and, in the upper hoist corner, a yellow star." height="70" width="110"></td>
+          <td class="born">blue background yellow-bordered red diagonal stripe yellow star top left corner</td>
+      </tr>
+      <tr>
+          <th scope="row">47</th>
+          <td class="name">Denmark</td>
+          <td class="flag"><img src="https://cdn.britannica.com/07/8007-004-8CF0B1A9/Flag-Denmark.jpg" alt="national flag consisting of a red field with an off-centre white cross." height="70" width="110"></td>
+          <td class="born">red background field off center centre white cross</td>
+      </tr>
+      <tr>
+          <th scope="row">48</th>
+          <td class="name">Djibouti</td>
+          <td class="flag"><img src="https://cdn.britannica.com/06/06-004-29FFD888/Flag-Djibouti.jpg" alt="national flag consisting of a horizontal stripe of light blue over one of light green and, at the hoist, a white triangle bearing a red star." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes light blue light green white triangle red star left</td>
+      </tr>
+      <tr>
+          <th scope="row">49</th>
+          <td class="name">Dominica</td>
+          <td class="flag"><img src="https://cdn.britannica.com/12/5112-004-58893CEE/Flag-Dominica.jpg" alt="national flag consisting of a green field (background) bearing a cross of yellow, black, and white stripes; in the centre of the flag, a red disk bears an imperial parrot encircled by green stars." height="70" width="110"></td>
+          <td class="born">green field background cross yellow black white stripes center centre red circle disk parrot green stars circle purple bird</td>
+      </tr>
+      <tr>
+          <th scope="row">50</th>
+          <td class="name">Dominican Republic</td>
+          <td class="flag"><img src="https://cdn.britannica.com/14/5114-004-C9B99800/Flag-Dominican-Republic.jpg" alt="national flag that is quartered blue-red-blue-red with a central white cross; when the flag is used for official purposes, it incorporates the coat of arms." height="70" width="110"></td>
+          <td class="born">quartered blue red center centre white cross coat of arms</td>
+      </tr>
+      <tr>
+          <th scope="row">51</th>
+          <td class="name">Ecuador</td>
+          <td class="flag"><img src="https://cdn.britannica.com/49/149-004-986E1BD8/flag-design-similarities-Ecuador-Colombia-flags-Venezuela.jpg" alt="national flag that is horizontally striped yellow-blue-red; when flown by the government, it incorporates a central coat of arms." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes yellow blue red coat of arms bird condor brown mountains boat river flags sun</td>
+      </tr>
+        <tr>
+          <th scope="row">52</th>
+          <td class="name">Egypt</td>
+          <td class="flag"><img src="https://cdn.britannica.com/85/185-004-1EA59040/Flag-Egypt.jpg" alt="horizontally striped red-white-black national flag with a central coat of arms in the form of a gold eagle." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes red white black central coat of arms center centre gold eagle text arabic</td>
+      </tr>
+        <tr>
+          <th scope="row">53</th>
+          <td class="name">El Salvador</td>
+          <td class="flag"><img src="https://cdn.britannica.com/10/7210-004-65DAD2F0/Flag-El-Salvador.jpg" alt="horizontally striped blue-white-blue national flag that normally incorporates the national coat of arms in its centre." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes blue white coat of arms center triangle flags leaves text mountains water</td>
+      </tr>
+      <tr>
+          <th scope="row">54</th>
+          <td class="name">Equatorial Guinea</td>
+          <td class="flag"><img src="https://cdn.britannica.com/50/5050-004-EB18953A/Flag-Equatorial-Guinea.jpg" alt="national flag consisting of horizontal stripes of green, white, and red, with a blue triangle at the hoist and the national coat of arms in the centre." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes green white red blue triangle left coat of arms center centre yellow stars above tree text ribbon</td>
+      </tr>
+        <tr>
+          <th scope="row">55</th>
+          <td class="name">Eritrea</td>
+          <td class="flag"><img src="https://cdn.britannica.com/09/09-004-63D8C33D/Flag-Eritrea.jpg" alt="national flag consisting of triangles of green, red, and blue and a yellow emblem off-centre toward the hoist." height="70" width="110"></td>
+          <td class="born">triangles green red blue yellow emblem off center left leaves</td>
+      </tr>
+      <tr>
+          <th scope="row">56</th>
+          <td class="name">Estonia</td>
+          <td class="flag"><img src="https://cdn.britannica.com/46/6246-004-865DA579/Flag-Estonia.jpg" alt="horizontally striped blue-black-white national flag." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes blue black white</td>
+      </tr>
+      <tr>
+          <th scope="row">57</th>
+          <td class="name">Eswatini</td>
+          <td class="flag"><img src="https://www.worldatlas.com/r/w960-q80/img/flag/sz-flag.jpg" alt="national flag consisting of horizontal stripes of blue, yellow, crimson, yellow, and blue, with a Swazi shield and weapons in the centre." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes blue yellow crimson swazi shield weapon emblem</td>
+      </tr>
+      <tr>
+          <th scope="row">58</th>
+          <td class="name">Ethiopia</td>
+          <td class="flag"><img src="https://cdn.britannica.com/12/12-004-A40EEB6F/Flag-Ethiopia.jpg" alt="horizontally striped green-yellow-red national flag with a central blue disk bearing a yellow star in outline." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes green yellow red central blue disk circle star</td>
+      </tr>
+      <tr>
+          <th scope="row">59</th>
+          <td class="name">Fiji</td>
+          <td class="flag"><img src="https://cdn.britannica.com/86/3286-004-ADA8C1B4/Flag-Fiji.jpg" alt="national flag consisting of a light blue field (background) bearing a Union Jack in the canton and the shield of the national coat of arms at the fly end." height="70" width="110"></td>
+          <td class="born">light blue field background union jack canton top left corner national coat of arms right palm tree bird plants yellow lion</td>
+      </tr>
+      <tr>
+          <th scope="row">60</th>
+          <td class="name">Finland</td>
+          <td class="flag"><img src="https://cdn.britannica.com/79/579-004-0EA4217C/Flag-Finland.jpg" alt="national flag consisting of a white field bearing a blue cross; when flown by the government, it incorporates a red, white, and yellow coat of arms featuring a lion." height="70" width="110"></td>
+          <td class="born">white field background blue cross off center </td>
+      </tr>
+      <tr>
+          <th scope="row">61</th>
+          <td class="name">France</td>
+          <td class="flag"><img src="https://cdn.britannica.com/82/682-004-F0B47FCB/Flag-France.jpg" alt="vertically striped blue-white-red national flag. " height="70" width="110"></td>
+          <td class="born">vertically striped stripes blue white red tricolor</td>
+      </tr>
+      <tr>
+          <th scope="row">62</th>
+          <td class="name">Gabon</td>
+          <td class="flag"><img src="https://cdn.britannica.com/85/7185-004-EBE5DBE5/Flag-Gabon.jpg" alt="horizontally striped green-yellow-blue national flag. " height="70" width="110"></td>
+          <td class="born">horizontally striped stripes green yellow blue tricolor</td>
+      </tr>      
+      <tr>
+          <th scope="row">63</th>
+          <td class="name">Gambia</td>
+          <td class="flag"><img src="https://cdn.britannica.com/52/5052-004-C6FC398B/Flag-of-The-Gambia.jpg" alt="national flag consisting of horizontal stripes of red, blue, and green separated by two thinner stripes of white." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes red blue green two thinner stripes white</td>
+      </tr>
+      <tr>
+          <th scope="row">64</th>
+          <td class="name">Georgia</td>
+          <td class="flag"><img src="https://cdn.britannica.com/17/4717-004-6F48198E/Flag-Republic-of-Georgia.jpg" alt="national flag consisting of a white field with a red cross dividing the field into quarters, each of which contains a red formée cross." height="70" width="110"></td>
+          <td class="born">white field background red cross quarters formee center</td>
+      </tr>
+      <tr>
+          <th scope="row">65</th>
+          <td class="name">Germany</td>
+          <td class="flag"><img src="https://cdn.britannica.com/97/897-004-232BDF01/Flag-Germany.jpg" alt="horizontally striped national flag of black, red, and “gold” (i.e., golden yellow); when used for official purposes, it may incorporate a central eagle shield." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes tricolor black red gold yellow</td>
+      </tr>
+      <tr>
+          <th scope="row">66</th>
+          <td class="name">Ghana</td>
+          <td class="flag"><img src="https://cdn.britannica.com/54/5054-004-A09ABCDF/Flag-Ghana.jpg" alt="horizontally striped red-yellow-green national flag with a central black star." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes red yellow green center central black star</td>
+      </tr>
+      <tr>
+          <th scope="row">67</th>
+          <td class="name">Greece</td>
+          <td class="flag"><img src="https://cdn.britannica.com/49/1049-004-AE4BAD3E/Flag-Greece.jpg" alt="national flag consisting of nine horizontal stripes of blue and white with a blue canton bearing a white cross. " height="70" width="110"></td>
+          <td class="born">nine horizontally striped stripes blue white canton white cross upper left corner</td>
+      </tr>
+      <tr>
+          <th scope="row">68</th>
+          <td class="name">Grenada</td>
+          <td class="flag"><img src="https://cdn.britannica.com/16/5116-004-E693F50C/Flag-Grenada.jpg" alt="national flag consisting of a diagonally divided field of yellow-green-yellow-green with a red border; in addition to the six yellow stars in the border, there is a central star in a red disk and, at the hoist, a nutmeg symbol." height="70" width="110"></td>
+          <td class="born">diagonally divided yellow green red border six yellow stars central center red disk circle nutmeg symbol</td>
+      </tr>
+      <tr>
+          <th scope="row">69</th>
+          <td class="name">Guatemala</td>
+          <td class="flag"><img src="https://cdn.britannica.com/13/7213-004-FFC58C1D/Flag-Guatemala.jpg" alt="vertically striped blue-white-blue national flag; when used for official purposes, it incorporates the national coat of arms in the centre." height="70" width="110"></td>
+          <td class="born">vertically striped stripes blue white coat of arms green bird leaves branches guns scroll text red quetzal</td>
+      </tr>
+      <tr>
+          <th scope="row">70</th>
+          <td class="name">Guinea</td>
+          <td class="flag"><img src="https://cdn.britannica.com/56/5056-004-0E251CE7/Flag-Guinea.jpg" alt="vertically striped red-yellow-green national flag. " height="70" width="110"></td>
+          <td class="born">vertically striped stripes red yellow green</td>
+      </tr>
+      <tr>
+          <th scope="row">71</th>
+          <td class="name">Guinea-Bissau</td>
+          <td class="flag"><img src="https://cdn.britannica.com/58/5058-004-49C2D897/Flag-Guinea-Bissau.jpg" alt="national flag consisting of two horizontal stripes of yellow and green and, at the hoist, a vertical red stripe with a black star." height="70" width="110"></td>
+          <td class="born">two horizontal stripes yellow green hoist vertical red stripe black star left middle</td>
+      </tr>
+      <tr>
+          <th scope="row">72</th>
+          <td class="name">Guyana</td>
+          <td class="flag"><img src="https://cdn.britannica.com/06/1106-004-F6772F48/Flag-Guyana.jpg" alt="national flag consisting of a green field incorporating a red hoist triangle and a central yellow arrowhead, separated by black and white borders." height="70" width="110"></td>
+          <td class="born">green field background red hoist triangle central center yellow arrowhead black white borders</td>
+      </tr>
+        <tr>
+          <th scope="row">73</th>
+          <td class="name">Haiti</td>
+          <td class="flag"><img src="https://cdn.britannica.com/18/5118-004-9C769B82/Flag-Haiti.jpg" alt="horizontally striped blue-red national flag; when flown by the government, it incorporates the national coat of arms on a central white panel." height="70" width="110"></td>
+          <td class="born">blue red national coat of arms central center white panel flags palm tree green hill ribbon text</td>
+      </tr>
+      <tr>
+          <th scope="row">74</th>
+          <td class="name">Holy See</td>
+          <td class="flag"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Flag_of_the_Vatican_City.svg/500px-Flag_of_the_Vatican_City.svg.png" alt="The flag consists of two vertical bands, one of gold or yellow (hoist side) and one of white with the crossed keys of Saint Peter and the Papal Tiara centered in the white band. The crossed keys consist of a golden and a silver key, in which the silver key is placed in the dexter position." height="70" width="110"></td>
+          <td class="born">vertical bicolor gold white coat of arms right side middle</td>
+      </tr>
+      <tr>
+          <th scope="row">75</th>
+          <td class="name">Honduras</td>
+          <td class="flag"><img src="https://cdn.britannica.com/16/7216-004-F1400CA0/Flag-Honduras.jpg" alt="horizontally striped blue-white-blue national flag with five central blue stars." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes blue white five central center stars</td>
+      </tr>
+       <tr>
+          <th scope="row">76</th>
+          <td class="name">Hungary</td>
+          <td class="flag"><img src="https://cdn.britannica.com/55/1455-004-5897143C/Flag-Hungary.jpg" alt="horizontally striped red-white-green national flag." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes red white green</td>
+      </tr>
+      <tr>
+          <th scope="row">77</th>
+          <td class="name">Iceland</td>
+          <td class="flag"><img src="https://cdn.britannica.com/85/1485-004-94C3DEDA/Flag-Iceland.jpg" alt="national flag consisting of a blue field incorporating a white-bordered red cross." height="70" width="110"></td>
+          <td class="born">blue field background white bordered red cross outline off center centre</td>
+      </tr>
+      <tr>
+          <th scope="row">78</th>
+          <td class="name">India</td>
+          <td class="flag"><img src="https://cdn.britannica.com/97/1597-004-05816F4E/Flag-India.jpg" alt="horizontally striped deep saffron (muted orange)–white–green national flag with a 24-spoked blue chakra (wheel) in the centre." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes saffron muted orange white grreen 24 spoked blue chakra wheel circle sun center centre</td>
+      </tr>
+      <tr>
+          <th scope="row">79</th>
+          <td class="name">Indonesia</td>
+          <td class="flag"><img src="https://cdn.britannica.com/48/1648-004-A33B72D8/Flag-Indonesia.jpg" alt="horizontally divided red-white national flag." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes red white bicolor</td>
+      </tr>
+      <tr>
+          <th scope="row">80</th>
+          <td class="name">Iran</td>
+          <td class="flag"><img src="https://cdn.britannica.com/22/1722-004-EAD033D8/Flag-Iran.jpg" alt="horizontally striped green-white-red national flag with a red design (a stylized coat of arms) in the centre and Arabic inscriptions along the edges of the stripes." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes green white red design stylized coat of arms center centre arabic instriptions pattern</td>
+      </tr>
+      <tr>
+          <th scope="row">81</th>
+          <td class="name">Iraq</td>
+          <td class="flag"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Flag_of_Iraq.svg/255px-Flag_of_Iraq.svg.png" alt="national flag consisting of three equal horizontal stripes of (from top to bottom) red, white, and black with the inscription in Kufic script “Allāhu akbar” (“God is great”) arranged horizontally in the centre of the white stripe." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes red white black inscription kufic script text center centre</td>
+      </tr>
+       <tr>
+          <th scope="row">82</th>
+          <td class="name">Ireland</td>
+          <td class="flag"><img src="https://cdn.britannica.com/33/1733-004-5BA407D6/FLAG-Ireland.jpg" alt="vertically striped green-white-orange national flag." height="70" width="110"></td>
+          <td class="born">vertically striped stripes green white red tricolor</td>
+      </tr>
+      <tr>
+          <th scope="row">83</th>
+          <td class="name">Israel</td>
+          <td class="flag"><img src="https://cdn.britannica.com/53/1753-004-03582EDA/Flag-Israel.jpg" alt="national flag consisting of a white field bearing two horizontal blue stripes and a central Shield of David (Hebrew: “Magen David”), which is also popularly known as the Star of David." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes blue white star of david center centre</td>
+      </tr>
+      <tr>
+          <th scope="row">84</th>
+          <td class="name">Italy</td>
+          <td class="flag"><img src="https://cdn.britannica.com/59/1759-004-F4175463/Flag-Italy.jpg" alt="vertically striped green-white-red national flag. " height="70" width="110"></td>
+          <td class="born">vertically striped stripes green white red tricolor</td>
+      </tr>
+      <tr>
+          <th scope="row">85</th>
+          <td class="name">Jamaica</td>
+          <td class="flag"><img src="https://cdn.britannica.com/20/5120-004-3E9D869E/Flag-Jamaica.jpg" alt="national flag with two green and two black triangles separated by a yellow saltire (diagonal cross)." height="70" width="110"></td>
+          <td class="born">two green black triangles yellow saltire diagonal cross x</td>
+      </tr>
+      <tr>
+          <th scope="row">86</th>
+          <td class="name">Japan</td>
+          <td class="flag"><img src="https://cdn.britannica.com/91/1791-004-DA3579A5/Flag-Japan.jpg" alt="national flag consisting of a white field bearing a central red disk (a stylized sun)." height="70" width="110"></td>
+          <td class="born">white field background central center centre red disk circle sun</td>
+      </tr>
+      <tr>
+          <th scope="row">87</th>
+          <td class="name">Jordan</td>
+          <td class="flag"><img src="https://cdn.britannica.com/20/5120-004-3E9D869E/Flag-Jamaica.jpg" alt="national flag with two green and two black triangles separated by a yellow saltire (diagonal cross)." height="70" width="110"></td>
+          <td class="born">two green black triangles yellow saltire diagonal cross x</td>
+      </tr>
+      <tr>
+          <th scope="row">88</th>
+          <td class="name">Kazakhstan</td>
+          <td class="flag"><img src="https://cdn.britannica.com/39/7239-004-1BEC6C20/Flag-Kazakhstan.jpg" alt="national flag consisting of a light blue field with a yellow sun and flying eagle in the centre and a yellow ornamental band at the hoist. " height="70" width="110"></td>
+          <td class="born">light blue background field yellow sun flying eagle center yellow ornamental band left vertical</td>
+      </tr>
+      <tr>
+          <th scope="row">89</th>
+          <td class="name">Kenya</td>
+          <td class="flag"><img src="https://cdn.britannica.com/15/15-004-B5D6BF80/Flag-Kenya.jpg" alt="national flag consisting of horizontal stripes of black, red, and green separated by thinner stripes of white; in the centre are two crossed spears and a shield." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes black red green thin white center centre two crossed spears shield</td>
+      </tr>
+      <tr>
+          <th scope="row">90</th>
+          <td class="name">Kiribati</td>
+          <td class="flag"><img src="https://cdn.britannica.com/88/3288-004-1F9FDA41/Flag-Kiribati.jpg" alt="national flag consisting of six wavy horizontal stripes of white and blue beneath a red field bearing a yellow bird and sun." height="70" width="110"></td>
+          <td class="born">six wavy horizontally striped stripes white blue red field background yellow bird sun center centre</td>
+      </tr>
+      <tr>
+          <th scope="row">91</th>
+          <td class="name">Kuwait</td>
+          <td class="flag"><img src="https://cdn.britannica.com/70/5770-004-A99DD01D/Flag-Kuwait.jpg" alt="horizontally striped green-white-red national flag with a black truncated triangle at the hoist." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes green white red black truncated triangle left</td>
+      </tr>
+      <tr>
+          <th scope="row">92</th>
+          <td class="name">Kyrgyzstan</td>
+          <td class="flag"><img src="https://cdn.britannica.com/41/7241-004-8C3C72DB/Flag-Kyrgyzstan.jpg" alt="national flag consisting of a red field with a stylized yellow sun-disk in the centre." height="70" width="110"></td>
+          <td class="born">red field background stylized sun circle disk circle yellow center centre</td>
+      </tr>
+      <tr>
+          <th scope="row">93</th>
+          <td class="name">Laos</td>
+          <td class="flag"><img src="https://cdn.britannica.com/29/4029-004-D7D8C514/Flag-Laos.jpg" alt="horizontally striped red-blue-red national flag with a central white disk." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes red blue red central white disk circle center centre</td>
+      </tr>
+      <tr>
+          <th scope="row">94</th>
+          <td class="name">Latvia</td>
+          <td class="flag"><img src="https://cdn.britannica.com/49/6249-004-D8906A92/Flag-Latvia.jpg" alt="national flag consisting of a crimson field (background) divided horizontally by a narrow white stripe." height="70" width="110"></td>
+          <td class="born">crimson red field background horizontally striped stripes bicolor white</td>
+      </tr>
+      <tr>
+          <th scope="row">95</th>
+          <td class="name">Lebanon</td>
+          <td class="flag"><img src="https://cdn.britannica.com/73/2073-004-E54934AE/Flag-Lebanon.jpg" alt="horizontally striped red-white-red national flag with a central green cedar tree." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes red white center central centre green cedar tree</td>
+      </tr>
+            <tr>
+          <th scope="row">96</th>
+          <td class="name">Lesotho</td>
+          <td class="flag"><img src="https://cdn.britannica.com/18/4218-004-3F1FD768/Lesotho-flag-colours-design-countries-sub-Saharan-African.jpg" alt="national flag consisting of three unequal horizontal stripes of blue, white, and green with a black emblem in the centre" height="70" width="110"></td>
+          <td class="born">tricolor three unequal horizontally striped stripes blue white green black emblem center central centre</td>
+      </tr>
+      <tr>
+          <th scope="row">97</th>
+          <td class="name">Liberia</td>
+          <td class="flag"><img src="https://cdn.britannica.com/60/5060-004-F0C9CBBF/Flag-Liberia.jpg" alt="horizontally striped national flag with six red stripes and five white stripes and a blue canton bearing a white star." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes six red five white blue canton square upper left corner white star</td>
+      </tr>
+      <tr>
+          <th scope="row">98</th>
+          <td class="name">Libya</td>
+          <td class="flag"><img src="https://cdn.britannica.com/37/3037-004-1C8F9958/Flag-Libya.jpg" alt="national flag consisting of three unequal horizontal stripes of (top to bottom) red, black, and green, with a white crescent and star centred on the larger black stripe." height="70" width="110"></td>
+          <td class="born">three unequal horizontally striped stripes red black green white crescent moon star center central centre</td>
+      </tr>
+      <tr>
+          <th scope="row">99</th>
+          <td class="name">Liechtenstein</td>
+          <td class="flag"><img src="https://cdn.britannica.com/02/2102-004-7650C719/Flag-Liechtenstein.jpg" alt="horizontally divided blue-red national flag with a yellow crown in the upper hoist corner. " height="70" width="110"></td>
+          <td class="born">horizontally striped stripes divided blue red yellow crown upper hoist left corner</td>
+      </tr>
+      <tr>
+          <th scope="row">100</th>
+          <td class="name">Lithuania</td>
+          <td class="flag"><img src="https://cdn.britannica.com/52/6252-004-88DCF537/Flag-Lithuania.jpg" alt="horizontally striped yellow-green-red national flag. It has a width-to-length ratio of 1 to 2." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes yellow green red</td>
+      </tr>
+      <tr>
+          <th scope="row">101</th>
+          <td class="name">Luxembourg</td>
+          <td class="flag"><img src="https://cdn.britannica.com/23/2223-004-AE86DC5A/Flag-Luxembourg.jpg" alt="horizontally striped red-white-blue national flag." height="70" width="110"></td>
+          <td class="born">horizontally striped stripes red white blue</td>
+      </tr>
+
+
     </tbody>
   </table>
 
-</div>
+  </div>
   </body>
-	<script>
+</div><!--end full page div-->
+  <script>
    
 var options = {
   valueNames: [ 'name', 'born' ]
