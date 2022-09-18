@@ -1,6 +1,61 @@
-.list {
-  font-family:sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+.raleway
+{
+  font-family: 'Raleway', sans-serif;
+
 }
+
+
+.full-page {
+    background-color: #C4EAEF;
+    );
+}
+
+.example
+{
+  padding-top: 5px;
+  font-weight: 300;
+  font-size: 15px;
+  text-align: center;
+}
+
+.list 
+{
+  font-family: sans-serif;
+}
+
+.table {
+ font-weight: 400; 
+
+}
+
+#users {
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-top: 1%;
+
+}
+.round
+{
+    width: 60%;
+    border-radius: 15px;
+    border: 1px solid white ;
+    padding: 5px 5px 5px 25px;
+    margin-bottom: 10px;
+    z-index: 5;
+    margin-left: 20%;
+    caret-color: black;
+    color: black;
+    font-size: 20px;
+    background-image:
+    linear-gradient(
+      to left, 
+      #F0DAF0, #C4EAEF
+    );
+    font-family: 'Raleway', sans-serif;
+}
+
 td {
   padding:10px; 
   border:solid 1px #eee;
@@ -34,7 +89,7 @@ input:focus {
   outline:none;
 }
 .sort:after {
-  display:inline-block;
+/*  display:inline-block;
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -43,7 +98,7 @@ input:focus {
   content:"";
   position: relative;
   top:-10px;
-  right:-5px;
+  right:-5px;*/
 }
 .sort.asc:after {
   width: 0;
@@ -67,3 +122,5 @@ input:focus {
   top:-4px;
   right:-5px;
 }
+
+
